@@ -1,0 +1,24 @@
+{
+  "name": "shelter_task",
+  "version": "1.0.0",
+  "description": "RS School Front-End Course Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/mikheytsevna-JSFE2023Q1.git"
+  },
+  "author": "MikheytsevNA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/mikheytsevna-JSFE2023Q1/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/mikheytsevna-JSFE2023Q1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.59.3"
+  }
+}
