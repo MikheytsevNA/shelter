@@ -1,0 +1,4 @@
+@use 'abstracts' as *;
+header {
+    background: url('./../../assets/noice.png'), radial-gradient(100% 215.42% at 0% 0%, $start-screen-gradient-background-left 0%, $start-screen-gradient-background-right 100%);
+}

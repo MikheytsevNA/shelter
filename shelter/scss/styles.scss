@@ -1,20 +1,8 @@
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-header {
-    color: #FF0000;
-}
-
-main {
-    color: #00FF00;
-}
-
-footer {
-    color: #0000FF;
-}
-
-.container {
-    margin: 0 auto;
-}
+@use 'abstracts';
+@use 'base';
+@use 'components';
+@use 'layout';
+@use 'pages';
+@use 'themes';
+@use 'utilities';
+@use 'vendors';
