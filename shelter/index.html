@@ -6,36 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter_project</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Tinos&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/16.png">
 </head>
 <body>
     <header>
         <div class="container">
-            <nav>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </nav>
-            <div class="start">
-                <div class="container">
-                    123
+            <div class="nav-panel">
+                <div class="logo">
+                    <div class="title"> Cozy House</div>
+                    <div class="subtitle"> Shelter for pets in Boston</div>
                 </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li>
+                            <a class="nav-link active-link"> About the shelter</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href='./html/our_pets.html'>Our pets</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href=#help>Help the shelter</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href=#contacts> Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="start">
+                <div class="start-text">
+                    <h1>
+                        Not only people need a house
+                    </h1>
+                    <p>We offer to give a chance to a little and nice puppy with an extremely wide and open heart. 
+                        He or she will love you more than anybody else in the world, you will see!
+                    </p>
+                    <div class="friendButton">
+                        <a href=#ourFriends>
+                            <div>Make a friend</div>
+                        </a>
+                    </div>
+                </div>
+                <img src="./assets/img/start-screen-puppy.svg" alt="Puppy picture">
             </div>
         </div>
     </header>
     <main>
         <div class="about">
             <div class="container">
-                123
+                <img src="./assets/img/about-pets.svg" alt="Puppy picture">
+                <div class="about-text">
+                    <h2>About the shelter “Cozy House”</h2>
+                    <p>Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family.
+                        The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.</p>
+                    <p>We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff.
+                        Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.</p>
+                </div>
             </div>
         </div>
-        <div class="pets">
+        <div class="pets" id="ourFriends">
             <div class="container">
                 123
             </div>
         </div>
-        <div class="help">
+        <div class="help" id="help">
             <div class="container">
                 123
             </div>
@@ -46,7 +84,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer id='contacts'>
         <div class="container">
             123
         </div>

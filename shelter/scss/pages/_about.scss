@@ -1,4 +1,30 @@
 @use 'abstracts' as *;
 .about {
     background-color: $color-light-xl;
+    .container {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        display: flex;
+        img {
+            width: 300px;
+        }
+        h2 {
+            color: $color-dark-l;
+            font-size: 35px;
+            line-height: 45.5px;
+            letter-spacing: 0.06em;
+            @include textFont("Tinos");
+            width: 370px;
+            margin: 0;
+        }
+        p {
+            color: $color-dark-xl;
+            font-size: 15px;
+            line-height: 24px;
+            @include textFont("Arimo");
+            width: 430px;
+            margin: 25px 0 0 0;
+        }
+    }
+    
 }

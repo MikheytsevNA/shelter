@@ -1,4 +1,94 @@
 @use 'abstracts' as *;
 header {
     background: url('./../../assets/noice.png'), radial-gradient(100% 215.42% at 0% 0%, $start-screen-gradient-background-left 0%, $start-screen-gradient-background-right 100%);
+    .container {
+        display: flex;
+        flex-direction: column;
+        .nav-panel {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0 0 0;
+            .logo {
+                display: flex;
+                flex-direction: column;
+                .title {
+                    color: $color-primary;
+                    @include textFont("Tinos");
+                    font-size: 2rem;
+                    line-height: 35.2px;
+                    letter-spacing: 0.06em;
+                }
+                .subtitle {
+                    color: $color-light-xl;
+                    @include textFont("Arimo");
+                    font-size: 13px;
+                    line-height: 14.95px;
+                    letter-spacing: 0.1em;
+                }
+            }
+            .nav-list{
+                display: flex;
+                list-style: none;
+                @include textFont("Arimo");
+                padding: 0;
+                .nav-link {
+                    text-decoration: none;
+                    color: $color-dark-s;
+                    font-size: 15px;
+                    line-height: 24px;
+                    cursor: pointer;
+                    margin: 0 0 0 35px;
+                }
+                .active-link {
+                    color: $color-light-s;
+                    border-bottom: 3px $color-primary solid;
+                    cursor:auto;
+                }
+            }
+        }
+        .start {
+            margin-top: 90px;
+            display: flex;
+            justify-content: space-between;
+            .start-text {
+                margin: 163px 0 0 0;
+                h1 {
+                    font-size: 44px;
+                    line-height: 57.2px;
+                    font-weight:400;
+                    @include textFont("Tinos");
+                    color: $color-light-xl;
+                    margin: 0 0 42px 0;
+                    width: 310px;
+                }
+                p {
+                    font-size: 15px;
+                    line-height: 24px;
+                    @include textFont("Arimo");
+                    color: $color-dark-s;
+                    margin: 0 0 57px 0;
+                    width: 460px;
+                }
+                .friendButton {
+                    display: inline;
+                    a {
+                        text-decoration: none;
+                        div {
+                            display: inline;
+                            font-size: 17px;
+                            line-height: 22.1px;
+                            @include textFont("Tinos");
+                            color: $color-dark-3xl;
+                            padding: 15px 45px;
+                            border-radius: 100px;
+                            background-color: $color-primary;
+                        }
+                    }
+                }
+            }
+            img {
+                width: 698px;
+            }
+        }
+    }
 }
