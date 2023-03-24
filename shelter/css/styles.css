@@ -116,9 +116,128 @@ body {
 .help {
   background-color: #FFFFFF;
 }
+.help .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.help .container h2 {
+  color: #545454;
+  font-family: "Tinos";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+  margin: 80px 0 0 0;
+}
+.help ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 60px 0 45px 0;
+}
+.help ul li {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 55px 120px;
+}
+.help ul li img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+  align-self: center;
+}
+.help ul li span {
+  color: #545454;
+  font-family: "Tinos";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23 px;
+  letter-spacing: 0.06em;
+}
 
 .pets {
   background-color: #F6F6F6;
+}
+.pets .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.pets .container h2 {
+  color: #545454;
+  font-family: "Tinos";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45.5px;
+  letter-spacing: 0.06em;
+  margin: 80px 0 0 0;
+}
+.pets .container .pet-cards-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0 0 0;
+}
+.pets .container .pet-cards-area .pet-card {
+  width: 270px;
+  border-radius: 9px;
+  background-color: #FAFAFA;
+}
+.pets .container .pet-cards-area .pet-card img {
+  margin: 0 0 30px 0;
+}
+.pets .container .pet-cards-area .pet-card p {
+  font-size: 20px;
+  line-height: 22.72px;
+  font-family: "Tinos";
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin: 0 0 30px 0;
+}
+.pets .container .pet-cards-area .pet-card button {
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  background-color: #FAFAFA;
+  margin: 0 0 30px 0;
+}
+.pets .container .pet-cards-area .pet-card div {
+  font-size: 17px;
+  line-height: 22.1px;
+  font-family: "Tinos";
+  letter-spacing: 0.06em;
+  color: #545454;
+  padding: 15px 45px;
+}
+.pets .container .pet-cards-area .arrow-button {
+  border: 2px solid #F1CDB3;
+  background-color: #F6F6F6;
+  height: 52px;
+  width: 52px;
+  border-radius: 100px;
+  padding: 0 0 6px 0;
+}
+.pets .container .pet-cards-area .arrow-button.right {
+  transform: rotate(180deg);
+}
+.pets .container .to_pets_button {
+  display: inline;
+  margin: 75px 0 115px 0;
+}
+.pets .container .to_pets_button a {
+  text-decoration: none;
+}
+.pets .container .to_pets_button a div {
+  display: inline;
+  font-size: 17px;
+  line-height: 22.1px;
+  font-family: "Tinos";
+  color: #292929;
+  padding: 15px 45px;
+  border-radius: 100px;
+  background-color: #F1CDB3;
 }
 
 .about {
@@ -138,6 +257,7 @@ body {
 .about .container h2 {
   color: #545454;
   font-size: 35px;
+  font-weight: 400;
   line-height: 45.5px;
   letter-spacing: 0.06em;
   font-family: "Tinos";

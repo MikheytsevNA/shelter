@@ -1,4 +1,82 @@
 @use 'abstracts' as *;
 .pets {
     background-color: $color-light-l;
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        h2 {
+            color: $color-dark-l;
+            @include textFont("Tinos");
+            font-size: 35px;
+            font-weight: 400;
+            line-height: 45.5px;
+            letter-spacing: 0.06em;
+            margin: 80px 0 0 0;
+        }
+        .pet-cards-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 0 0 0;
+            .pet-card {
+                width: 270px;
+                border-radius: 9px;
+                background-color: $color-light-s;
+                img {
+                    margin: 0 0 30px 0;
+                }
+                p {
+                    font-size: 20px;
+                    line-height: 22.72px;
+                    @include textFont("Tinos");
+                    letter-spacing: 0.06em;
+                    color: $color-dark-l;
+                    margin: 0 0 30px 0;
+                }
+                button {
+                    border: 2px solid $color-primary;
+                    border-radius: 100px;
+                    background-color: $color-light-s;
+                    margin: 0 0 30px 0;
+                }
+                div {
+                    font-size: 17px;
+                    line-height: 22.1px;
+                    @include textFont("Tinos");
+                    letter-spacing: 0.06em;
+                    color: $color-dark-l;
+                    padding: 15px 45px;
+                }
+            }
+            .arrow-button {
+                border: 2px solid $color-primary;
+                background-color: $color-light-l;
+                height: 52px;
+                width: 52px;
+                border-radius: 100px;
+                padding: 0 0 6px 0;
+                &.right {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .to_pets_button {
+            display: inline;
+            margin: 75px 0 115px 0;
+            a {
+                text-decoration: none;
+                div {
+                    display: inline;
+                    font-size: 17px;
+                    line-height: 22.1px;
+                    @include textFont("Tinos");
+                    color: $color-dark-3xl;
+                    padding: 15px 45px;
+                    border-radius: 100px;
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
 }
