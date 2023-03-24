@@ -1,4 +1,66 @@
 @use 'abstracts' as *;
 .donation {
     background-color: $color-light-l;
+    .danation-container {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 0 100px 0;
+        margin: 1px 0 0 0;
+        .donation_dog{
+            width: 505px;
+            margin: 0 30px 0 0;
+        }
+        .donationText {
+            width: 380px;
+            text-align: left;
+            h2 {
+                color: $color-dark-l;
+                @include textFont("Tinos");
+                font-size: 35px;
+                font-weight: 400;
+                line-height: 45.5px;
+                letter-spacing: 0.10em;
+                margin: 0 0 20px 0;
+            }
+            p {
+                color: $color-dark-l;
+                @include textFont("Tinos");
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 16.5px;
+                letter-spacing: 0.10em;
+                margin: 0 0 20px 0;
+            }
+            .credit-card {
+                display: inline-flex;
+                padding: 10px 15px 10px 15px;
+                margin: 0 0 20px 0;
+                border-radius: 9px;
+                background-color: $color-primary;
+                img {
+                    margin: 0 15px 0 0;
+                }
+                span {
+                    color: $color-dark-l;
+                    @include textFont("Tinos");
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 23px;
+                    letter-spacing: 0.12em;
+                }
+            }
+            .legal-info {
+                @include textFont("Arimo");
+                font-size: 12px;
+                line-height: 18px;
+                font-style: italic;
+                color: $color-dark-m;
+                letter-spacing: initial;
+                margin: 0;
+            }
+
+        }
+    }
 }

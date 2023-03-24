@@ -16,7 +16,8 @@ header {
                     @include textFont("Tinos");
                     font-size: 2rem;
                     line-height: 35.2px;
-                    letter-spacing: 0.06em;
+                    letter-spacing: 0.07em;
+                    margin: 0 0 10px 0;
                 }
                 .subtitle {
                     color: $color-light-xl;
@@ -24,13 +25,16 @@ header {
                     font-size: 13px;
                     line-height: 14.95px;
                     letter-spacing: 0.1em;
+                    margin: 0 0 0 4px;
                 }
             }
             .nav-list{
                 display: flex;
                 list-style: none;
                 @include textFont("Arimo");
+                letter-spacing: initial;
                 padding: 0;
+                margin: 16px 2px 0 0;
                 .nav-link {
                     text-decoration: none;
                     color: $color-dark-s;
@@ -38,6 +42,7 @@ header {
                     line-height: 24px;
                     cursor: pointer;
                     margin: 0 0 0 35px;
+                    padding: 0 0 4px 0;
                 }
                 .active-link {
                     color: $color-light-s;
@@ -57,6 +62,7 @@ header {
                     line-height: 57.2px;
                     font-weight:400;
                     @include textFont("Tinos");
+                    letter-spacing: 0.04em;
                     color: $color-light-xl;
                     margin: 0 0 42px 0;
                     width: 310px;
@@ -76,10 +82,12 @@ header {
                         div {
                             display: inline;
                             font-size: 17px;
+                            font-weight: 400;
                             line-height: 22.1px;
                             @include textFont("Tinos");
                             color: $color-dark-3xl;
-                            padding: 15px 45px;
+                            letter-spacing: 0.10em;
+                            padding: 16px 45px;
                             border-radius: 100px;
                             background-color: $color-primary;
                         }
