@@ -22,6 +22,9 @@ header .container .nav-panel .logo {
   display: flex;
   flex-direction: column;
 }
+header .container .nav-panel .logo a {
+  text-decoration: none;
+}
 header .container .nav-panel .logo .title {
   color: #F1CDB3;
   font-family: "Tinos";
@@ -54,6 +57,9 @@ header .container .nav-panel .nav-list .nav-link {
   cursor: pointer;
   margin: 0 0 0 35px;
   padding: 0 0 4px 0;
+}
+header .container .nav-panel .nav-list .nav-link:hover {
+  color: #FAFAFA;
 }
 header .container .nav-panel .nav-list .active-link {
   color: #FAFAFA;
@@ -104,8 +110,68 @@ header .container .start .start-text .friendButton a div {
   border-radius: 100px;
   background-color: #F1CDB3;
 }
+header .container .start .start-text .friendButton a div:hover {
+  background-color: #FDDCC4;
+}
 header .container .start img {
   width: 698px;
+}
+header.pets-page {
+  background: #FFFFFF;
+}
+header.pets-page .container {
+  display: flex;
+  flex-direction: column;
+}
+header.pets-page .container .nav-panel {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 30px 0;
+}
+header.pets-page .container .nav-panel .logo {
+  display: flex;
+  flex-direction: column;
+}
+header.pets-page .container .nav-panel .logo .title {
+  color: #545454;
+  font-family: "Tinos";
+  font-size: 2rem;
+  line-height: 35.2px;
+  letter-spacing: 0.09em;
+  margin: 0 0 10px 0;
+}
+header.pets-page .container .nav-panel .logo .subtitle {
+  color: #292929;
+  font-family: "Arimo";
+  font-size: 13px;
+  line-height: 14.95px;
+  letter-spacing: 0.1em;
+  margin: 0 0 0 4px;
+}
+header.pets-page .container .nav-panel .nav-list {
+  display: flex;
+  list-style: none;
+  font-family: "Arimo";
+  letter-spacing: initial;
+  padding: 0;
+  margin: 16px 2px 0 0;
+}
+header.pets-page .container .nav-panel .nav-list .nav-link {
+  text-decoration: none;
+  color: #545454;
+  font-size: 15px;
+  line-height: 24px;
+  cursor: pointer;
+  margin: 0 0 0 35px;
+  padding: 0 0 4px 0;
+}
+header.pets-page .container .nav-panel .nav-list .nav-link:hover {
+  color: #292929;
+}
+header.pets-page .container .nav-panel .nav-list .active-link {
+  color: #292929;
+  border-bottom: 3px #F1CDB3 solid;
+  cursor: auto;
 }
 
 footer {
@@ -169,7 +235,7 @@ footer .footer-container .footer-visit div {
 footer .footer-container .footer-visit div img {
   margin: 0 20px 0 0;
 }
-footer .footer-container .footer-visit div span {
+footer .footer-container .footer-visit div a {
   text-decoration: none;
   color: #F1CDB3;
   font-family: "Tinos";
@@ -231,7 +297,7 @@ body {
 .donation .danation-container .donationText .credit-card img {
   margin: 0 15px 0 0;
 }
-.donation .danation-container .donationText .credit-card span {
+.donation .danation-container .donationText .credit-card a {
   color: #545454;
   font-family: "Tinos";
   font-size: 20px;
@@ -262,27 +328,28 @@ body {
   font-family: "Tinos";
   font-size: 35px;
   font-weight: 400;
-  line-height: 45.5px;
-  letter-spacing: 0.06em;
-  margin: 80px 0 0 0;
+  line-height: 47.5px;
+  letter-spacing: 0.094em;
+  margin: 79px 0 0 3px;
 }
 .help ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  justify-items: flex-start;
   padding: 0;
-  margin: 60px 0 45px 0;
+  margin: 56px 0 45px 0;
 }
 .help ul li {
   display: flex;
   flex-direction: column;
-  margin: 0 0 55px 120px;
+  margin: 0 61px 55px 61px;
 }
 .help ul li img {
   width: 60px;
   height: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   align-self: center;
 }
 .help ul li span {
@@ -290,8 +357,8 @@ body {
   font-family: "Tinos";
   font-size: 20px;
   font-weight: 400;
-  line-height: 23 px;
-  letter-spacing: 0.06em;
+  line-height: 26px;
+  letter-spacing: 0.094em;
 }
 
 .pets {
@@ -308,7 +375,7 @@ body {
   font-size: 35px;
   font-weight: 400;
   line-height: 45.5px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   margin: 80px 0 0 0;
 }
 .pets .container .pet-cards-area {
@@ -321,15 +388,16 @@ body {
   width: 270px;
   border-radius: 9px;
   background-color: #FAFAFA;
+  cursor: pointer;
 }
 .pets .container .pet-cards-area .pet-card img {
-  margin: 0 0 30px 0;
+  margin: 0 0 25px 0;
 }
 .pets .container .pet-cards-area .pet-card p {
   font-size: 20px;
   line-height: 22.72px;
   font-family: "Tinos";
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   color: #545454;
   margin: 0 0 30px 0;
 }
@@ -339,13 +407,19 @@ body {
   background-color: #FAFAFA;
   margin: 0 0 30px 0;
 }
+.pets .container .pet-cards-area .pet-card button:hover {
+  background-color: #FDDCC4;
+}
 .pets .container .pet-cards-area .pet-card div {
   font-size: 17px;
-  line-height: 22.1px;
+  line-height: 24.1px;
   font-family: "Tinos";
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   color: #545454;
-  padding: 15px 45px;
+  padding: 12px 39px;
+}
+.pets .container .pet-cards-area .pet-card:hover {
+  background-color: #FFFFFF;
 }
 .pets .container .pet-cards-area .arrow-button {
   border: 2px solid #F1CDB3;
@@ -354,9 +428,14 @@ body {
   width: 52px;
   border-radius: 100px;
   padding: 0 0 6px 0;
+  margin: 0 -38px 0 0;
 }
 .pets .container .pet-cards-area .arrow-button.right {
   transform: rotate(180deg);
+  margin: 0 0 0 -38px;
+}
+.pets .container .pet-cards-area .arrow-button:hover {
+  background-color: #FDDCC4;
 }
 .pets .container .to_pets_button {
   display: inline;
@@ -368,12 +447,81 @@ body {
 .pets .container .to_pets_button a div {
   display: inline;
   font-size: 17px;
-  line-height: 22.1px;
+  line-height: 23.1px;
   font-family: "Tinos";
+  letter-spacing: 0.1em;
   color: #292929;
-  padding: 15px 45px;
+  padding: 16px 45px;
   border-radius: 100px;
   background-color: #F1CDB3;
+}
+.pets .container .to_pets_button a div:hover {
+  background-color: #FDDCC4;
+}
+.pets.pets-page .container {
+  display: flex;
+  flex-direction: column;
+}
+.pets.pets-page .container h2 {
+  letter-spacing: 0.102em;
+}
+.pets.pets-page .container .pet-cards-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.pets.pets-page .container .pet-cards-area .pet-card {
+  margin-bottom: 30px;
+}
+.pets.pets-page .container .list-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 100px 0;
+}
+.pets.pets-page .container .list-buttons button {
+  border: 2px solid #F1CDB3;
+  background-color: #F6F6F6;
+  color: #292929;
+  height: 52px;
+  width: 52px;
+  border-radius: 100px;
+  margin: 0 10px 0 10px;
+}
+.pets.pets-page .container .list-buttons button span {
+  font-family: "Tinos";
+  letter-spacing: 0.1em;
+  font-size: 20px;
+  line-height: 23px;
+  padding: 20px 0 0 2px;
+}
+.pets.pets-page .container .list-buttons button.inactive {
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
+  cursor: default;
+}
+.pets.pets-page .container .list-buttons button.inactive:hover {
+  background-color: inherit;
+}
+.pets.pets-page .container .list-buttons button:hover {
+  background-color: #FDDCC4;
+}
+.pets.pets-page .container .list-buttons .list-counter {
+  border: 2px solid #F1CDB3;
+  background-color: #F1CDB3;
+  color: #292929;
+  font-family: "Tinos";
+  letter-spacing: 0.1em;
+  font-size: 20px;
+  line-height: 23px;
+  height: 49px;
+  width: 49px;
+  border-radius: 94px;
+  margin: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about {
@@ -407,6 +555,10 @@ body {
   font-family: "Arimo";
   width: 430px;
   margin: 25px 0 0 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 article,

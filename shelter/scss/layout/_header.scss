@@ -11,6 +11,9 @@ header {
             .logo {
                 display: flex;
                 flex-direction: column;
+                a {
+                    text-decoration: none;
+                }
                 .title {
                     color: $color-primary;
                     @include textFont("Tinos");
@@ -43,6 +46,9 @@ header {
                     cursor: pointer;
                     margin: 0 0 0 35px;
                     padding: 0 0 4px 0;
+                    &:hover {
+                        color: $color-light-s;
+                    }
                 }
                 .active-link {
                     color: $color-light-s;
@@ -90,12 +96,72 @@ header {
                             padding: 16px 45px;
                             border-radius: 100px;
                             background-color: $color-primary;
+                            &:hover {
+                                background-color: $color-primary-light;
+                            }
                         }
                     }
                 }
             }
             img {
                 width: 698px;
+            }
+        }
+    }
+    &.pets-page {
+        background: $color-light-xl;
+        .container {
+            display: flex;
+            flex-direction: column;
+            .nav-panel {
+                display: flex;
+                justify-content: space-between;
+                margin: 30px 0 30px 0;
+                .logo {
+                    display: flex;
+                    flex-direction: column;
+                    .title {
+                        color: $color-dark-l;
+                        @include textFont("Tinos");
+                        font-size: 2rem;
+                        line-height: 35.2px;
+                        letter-spacing: 0.09em;
+                        margin: 0 0 10px 0;
+                    }
+                    .subtitle {
+                        color: $color-dark-3xl;
+                        @include textFont("Arimo");
+                        font-size: 13px;
+                        line-height: 14.95px;
+                        letter-spacing: 0.1em;
+                        margin: 0 0 0 4px;
+                    }
+                }
+                .nav-list{
+                    display: flex;
+                    list-style: none;
+                    @include textFont("Arimo");
+                    letter-spacing: initial;
+                    padding: 0;
+                    margin: 16px 2px 0 0;
+                    .nav-link {
+                        text-decoration: none;
+                        color: $color-dark-l;
+                        font-size: 15px;
+                        line-height: 24px;
+                        cursor: pointer;
+                        margin: 0 0 0 35px;
+                        padding: 0 0 4px 0;
+                        &:hover {
+                            color: $color-dark-3xl;
+                        }
+                    }
+                    .active-link {
+                        color: $color-dark-3xl;
+                        border-bottom: 3px $color-primary solid;
+                        cursor:auto;
+                    }
+                }
             }
         }
     }

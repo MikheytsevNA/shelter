@@ -11,7 +11,7 @@
             font-size: 35px;
             font-weight: 400;
             line-height: 45.5px;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.1em;
             margin: 80px 0 0 0;
         }
         .pet-cards-area {
@@ -23,14 +23,15 @@
                 width: 270px;
                 border-radius: 9px;
                 background-color: $color-light-s;
+                cursor: pointer;
                 img {
-                    margin: 0 0 30px 0;
+                    margin: 0 0 25px 0;
                 }
                 p {
                     font-size: 20px;
                     line-height: 22.72px;
                     @include textFont("Tinos");
-                    letter-spacing: 0.06em;
+                    letter-spacing: 0.1em;
                     color: $color-dark-l;
                     margin: 0 0 30px 0;
                 }
@@ -39,14 +40,20 @@
                     border-radius: 100px;
                     background-color: $color-light-s;
                     margin: 0 0 30px 0;
+                    &:hover {
+                        background-color: $color-primary-light;
+                    }
                 }
                 div {
                     font-size: 17px;
-                    line-height: 22.1px;
+                    line-height: 24.1px;
                     @include textFont("Tinos");
-                    letter-spacing: 0.06em;
+                    letter-spacing: 0.1em;
                     color: $color-dark-l;
-                    padding: 15px 45px;
+                    padding: 12px 39px;
+                }
+                &:hover {
+                    background-color: $color-light-xl;
                 }
             }
             .arrow-button {
@@ -56,8 +63,13 @@
                 width: 52px;
                 border-radius: 100px;
                 padding: 0 0 6px 0;
+                margin: 0 -38px 0 0;
                 &.right {
                     transform: rotate(180deg);
+                    margin: 0 0 0 -38px;
+                }
+                &:hover {
+                    background-color: $color-primary-light;
                 }
             }
         }
@@ -69,12 +81,83 @@
                 div {
                     display: inline;
                     font-size: 17px;
-                    line-height: 22.1px;
+                    line-height: 23.1px;
                     @include textFont("Tinos");
+                    letter-spacing: 0.1em;
                     color: $color-dark-3xl;
-                    padding: 15px 45px;
+                    padding: 16px 45px;
                     border-radius: 100px;
                     background-color: $color-primary;
+                    &:hover {
+                        background-color: $color-primary-light;
+                    }
+                }
+            }
+        }
+    }
+    &.pets-page {
+        .container {
+            display: flex;
+            flex-direction: column;
+            h2 {
+                letter-spacing: 0.102em;
+            }
+            .pet-cards-area {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-bottom: 28px;
+                .pet-card {
+                    margin-bottom: 30px;
+                }
+            }
+            .list-buttons {
+                display: flex;
+                justify-content: center;
+                margin: 0 0 100px 0;
+                button {
+                    border: 2px solid $color-primary;
+                    background-color: $color-light-l;
+                    color: $color-dark-3xl;
+                    height: 52px;
+                    width: 52px;
+                    border-radius: 100px;
+                    margin: 0 10px 0 10px;
+                    span {
+                        @include textFont("Tinos");
+                        letter-spacing: 0.1em;
+                        font-size: 20px;
+                        line-height: 23px;
+                        padding: 20px 0 0 2px;
+                    }
+                    &.inactive {
+                        border: 2px solid $color-dark-s;
+                        color: $color-dark-s;
+                        cursor:default;
+                        &:hover {
+                            background-color: inherit;
+                        } 
+                    }
+                    &:hover {
+                        background-color: $color-primary-light;
+                    }
+                }
+                .list-counter {
+                    border: 2px solid $color-primary;
+                    background-color: $color-primary;
+                    color: $color-dark-3xl;
+                    @include textFont("Tinos");
+                    letter-spacing: 0.1em;
+                    font-size: 20px;
+                    line-height: 23px;
+                    height: 49px;
+                    width: 49px;
+                    border-radius: 94px;
+                    margin: 0 10px 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }

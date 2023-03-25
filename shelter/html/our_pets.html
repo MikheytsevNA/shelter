@@ -6,34 +6,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter_project</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Tinos&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon/32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon/16.png">
 </head>
 <body>
-    <header>
+    <header class="pets-page">
         <div class="container">
-            <nav>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </nav>
-            <div class="start">
-                <div class="container">
-                    123
+            <div class="nav-panel">
+                <div class="logo">
+                    <a href='./../index.html'>
+                        <div class="title"> Cozy House</div>
+                    <div class="subtitle"> Shelter for pets in Boston</div>
+                    </a>
                 </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li>
+                            <a class="nav-link" href='./../index.html'> About the shelter</a>
+                        </li>
+                        <li>
+                            <a class="nav-link active-link">Our pets</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href='./../index.html#help'>Help the shelter</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href=#contacts> Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
     <main>
-        <div class="about">
+        <div class="pets pets-page" id="ourFriends">
             <div class="container">
-                123
+                <h2>Our friends who <br>are looking for a house</h2>
+                <div class="pet-cards-area">
+                    <div class="pet-card">
+                        <img src="./../assets/img/pets-katrine.svg" alt="cat picture">
+                        <p>Katrine</p>
+                        <button class="learn-more-button">
+                            <div>
+                                Learn more
+                            </div>
+                        </button>
+                    </div>
+                    <div class="pet-card">
+                        <img src="./../assets/img/pets-jennifer.svg" alt="puppy picture">
+                        <p>Jennifer</p>
+                        <button class="learn-more-button">
+                            <div>
+                                Learn more
+                            </div>
+                        </button>
+                    </div>
+                    <div class="pet-card">
+                        <img src="./../assets/img/pets-woody.svg" alt="dog picture">
+                        <p>Woody</p>
+                        <button class="learn-more-button">
+                            <div>
+                                Learn more
+                            </div>
+                        </button>
+                    </div>
+                    <div class="pet-card">
+                        <img src="./../assets/img/pets-sophia.svg" alt="puppy picture">
+                        <p>Sophia</p>
+                        <button class="learn-more-button">
+                            <div>
+                                Learn more
+                            </div>
+                        </button>
+                    </div>
+                    <div class="pet-card">
+                        <img src="./../assets/img/pets-timmy.svg" alt="cat picture">
+                        <p>Timmy</p>
+                        <button class="learn-more-button">
+                            <div>
+                                Learn more
+                            </div>
+                        </button>
+                    </div>
+                    <div class="pet-card">
+                        <img src="./../assets/img/pets-charly.svg" alt="dog picture">
+                        <p>Charly</p>
+                        <button class="learn-more-button">
+                            <div>
+                                Learn more
+                            </div>
+                        </button>
+                    </div>
+                    <div class="pet-card">
+                        <img src="./../assets/img/pets-scarlet.svg" alt="dog picture">
+                        <p>Scarlett</p>
+                        <button class="learn-more-button">
+                            <div>
+                                Learn more
+                            </div>
+                        </button>
+                    </div>
+                    <div class="pet-card">
+                        <img src="./../assets/img/pets-freddie.svg" alt="dog picture">
+                        <p>Freddie</p>
+                        <button class="learn-more-button">
+                            <div>
+                                Learn more
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="list-buttons">
+                    <button class="to-first-button inactive">
+                        <span>&lt&lt</span>
+                    </button>
+                    <button class="to-prev-button inactive">
+                        <span>&lt</span>
+                    </button>
+                    <div class="list-counter">
+                        1
+                    </div>
+                    <button class="to-last-button">
+                        <span>&gt</span>
+                    </button>
+                    <button class="to-next-button">
+                        <span>&gt&gt</span>
+                    </button>
+                </div>
             </div>
         </div>
     </main>
-    <footer>
+    <footer id='contacts'>
         <div class="container">
-            123
+            <div class="footer-container">
+                <div class="footer-questions">
+                    <h2>For questions<br> and suggestions</h2>
+                    <div>
+                        <img src="./../assets/img/icon-email.svg" alt="email icon">
+                        <a href="mailto:email@shelter.com">email@shelter.com</a>
+                    </div>
+                    <div>
+                        <img src="./../assets/img/icon-phone.svg" alt="phone icon">
+                        <a href="tel:+13 674 567 75 54">+13 674 567 75 54</a>
+                    </div>
+                </div>
+                <div class="footer-visit">
+                    <h2>We are waiting<br> for your visit</h2>
+                    <div>
+                        <img src="./../assets/img/icon-marker.svg" alt="Boston icon">
+                        <span>1 Central Street, Boston<br> (entrance from the store)</span>
+                    </div>
+                    <div>
+                        <img src="./../assets/img/icon-marker.svg" alt="London icon">
+                        <span>18 South Park, London </span>
+                    </div>
+                </div>
+                <img src="./../assets/img/footer-puppy.svg" alt="Puppy photo">
+            </div>
         </div>
     </footer>
 </body>
