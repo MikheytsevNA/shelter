@@ -1,6 +1,6 @@
 @use 'abstracts' as *;
 footer {
-    background: url('./../../assets/noize.png'), radial-gradient(100% 215.42% at 0% 0%, $footer-screen-gradient-background-left 0%, $footer-screen-gradient-background-right 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
+    background: url('./../../assets/img/noize.png'), radial-gradient(100% 215.42% at 0% 0%, $footer-screen-gradient-background-left 0%, $footer-screen-gradient-background-right 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;
     .footer-container {
         display: flex;
         justify-content: space-between;
