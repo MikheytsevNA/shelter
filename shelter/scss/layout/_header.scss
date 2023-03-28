@@ -1,6 +1,6 @@
 @use 'abstracts' as *;
 header {
-    background: url('./../../assets/img/noise_transparent.svg'), radial-gradient(100% 215.42% at 0% 0%, $start-screen-gradient-background-left 0%, $start-screen-gradient-background-right 100%);
+    background: url('./../assets/img/noise_transparent.svg'), radial-gradient(100% 215.42% at 0% 0%, $start-screen-gradient-background-left 0%, $start-screen-gradient-background-right 100%);
     .container {
         display: flex;
         flex-direction: column;

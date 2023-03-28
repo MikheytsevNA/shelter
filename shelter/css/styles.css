@@ -7,7 +7,7 @@
 }
 
 header {
-  background: url("./../../assets/img/noise_transparent.svg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+  background: url("./../assets/img/noise_transparent.svg"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
 header .container {
   display: flex;
@@ -176,7 +176,7 @@ header.pets-page .container .nav-panel .nav-list .active-link {
 }
 
 footer {
-  background: url("./../../assets/img/noise_transparent.svg"), radial-gradient(100% 215.42% at 0% 0%, #1A1A1C 0%, #513D2F 100%), #211F20;
+  background: url("./../assets/img/noise_transparent.svg"), radial-gradient(100% 215.42% at 0% 0%, #1A1A1C 0%, #513D2F 100%), #211F20;
 }
 footer .footer-container {
   display: flex;
@@ -528,7 +528,7 @@ body {
 }
 .about .container {
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
