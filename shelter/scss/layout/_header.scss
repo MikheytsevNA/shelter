@@ -64,6 +64,8 @@ header {
             justify-content: space-between;
             .start-text {
                 margin: 163px 0 0 0;
+                display: flex;
+                flex-direction: column;
                 h1 {
                     font-size: 44px;
                     line-height: 57.2px;
@@ -105,7 +107,25 @@ header {
                 }
             }
             img {
-                width: 698px;
+                width: 54.5vw;
+                @media (max-width: calc($width_tablet + 250px)) {
+                    align-self: flex-end;
+                    margin: 100px 0 0 0;
+                    width: 569px;
+                }
+            }
+            @media (max-width: calc($width_tablet + 250px)) {
+                margin-top: 60px;
+                flex-direction: column;
+                align-items: center;
+                .start-text {
+                    margin: 0 0 0 0;
+                    display: flex;
+                    flex-direction: column;
+                    .friendButton {
+                        margin: 0 auto;
+                    }
+                }
             }
         }
     }

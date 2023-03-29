@@ -1,6 +1,13 @@
+@use 'abstracts' as *;
 .container {
     margin: 0 auto;
     padding: 0;
     width: calc(100% - 80px);
     max-width: 1200px;
+    @media (max-width: $width_tablet) {
+        width: calc(100% - 60px);
+    }
+    @media (max-width: $width_mobile) {
+        width: calc(100% - 40px);
+    }
 }

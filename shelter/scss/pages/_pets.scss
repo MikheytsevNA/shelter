@@ -53,6 +53,12 @@
                 &:hover {
                     background-color: $color-light-xl;
                 }
+                @media (max-width: calc($width_tablet + 200px)) {
+                    &.tablet-dispay {
+                        display: none;
+                    }
+                }
+                
             }
             .arrow-button {
                 border: 2px solid $color-primary;
@@ -68,6 +74,12 @@
                 }
                 &:hover {
                     background-color: $color-primary-light;
+                }
+                @media (max-width: $width_tablet) {
+                    margin: 0 -27px 0 0;
+                    &.right {
+                        margin: 0 0 0 -27px;
+                    }
                 }
             }
         }
