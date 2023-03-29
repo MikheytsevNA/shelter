@@ -20,6 +20,7 @@
             align-items: center;
             margin: 60px 0 0 0;
             .pet-card {
+                box-sizing: border-box;
                 width: 270px;
                 border-radius: 9px;
                 background-color: $color-light-s;
@@ -115,11 +116,21 @@
             .pet-cards-area {
                 display: flex;
                 justify-content: space-between;
+                row-gap: 30px;
                 align-items: center;
                 flex-wrap: wrap;
-                margin-bottom: 28px;
+                margin-bottom: 60px;
+                @media (max-width: calc($width_tablet + 80px)) {
+                    justify-content: center;
+                    column-gap: 40px;
+                    margin-bottom: 40px;
+                }
                 .pet-card {
-                    margin-bottom: 30px;
+                    @media (max-width: calc($width_tablet + 80px)) {
+                        &.tablet-dispay {
+                            display: none;
+                        }
+                    }
                 }
             }
             .list-buttons {
@@ -168,6 +179,9 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                }
+                @media (max-width: calc($width_tablet + 200px)) {
+                    margin-bottom: 76px;
                 }
             }
         }
