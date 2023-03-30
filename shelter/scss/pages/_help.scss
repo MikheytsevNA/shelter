@@ -13,41 +13,57 @@
             line-height: 47.5px;
             letter-spacing: 0.094em;
             margin: 79px 0 0 3px;
+            @media (max-width: $width_mobile) {
+                margin: 42px 0 0 0;
+                font-size: 25px;
+                line-height: 32.5px;
         }
-    }
+        }
 
-    ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        justify-items: flex-start;
-        padding: 0;
-        margin: 60px 0 100px 0;
-        column-gap: 120px;
-        row-gap: 55px;
-        li {
+        ul {
+            list-style: none;
             display: flex;
-            flex-direction: column;
-            img {
-                width: 60px;
-                height: 60px;
-                margin-bottom: 28px;
-                align-self: center;
-            }
-            span {
-                color: $color-dark-l;
-                @include textFont("Tinos");
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 26px;
-                letter-spacing: 0.094em;
-            }
-        }
-        @media (max-width: $width_tablet) {
-            column-gap: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-items: flex-start;
+            padding: 0;
+            margin: 60px 0 100px 0;
+            column-gap: 120px;
+            row-gap: 55px;
             li {
-                min-width: 170px;
+                display: flex;
+                flex-direction: column;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 28px;
+                    align-self: center;
+                }
+                span {
+                    color: $color-dark-l;
+                    @include textFont("Tinos");
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    letter-spacing: 0.094em;
+                }
+            }
+            @media (max-width: $width_tablet) {
+                column-gap: 60px;
+                li {
+                    min-width: 170px;
+                }
+            }
+            @media (max-width: $width_mobile) {
+                margin: 42px 0 42px 0;
+                column-gap: 30px;
+                li {
+                    min-width: 130px;
+                    span {
+                        font-size: 15px;
+                        line-height: 16.5px;
+                    }
+                }
             }
         }
     }

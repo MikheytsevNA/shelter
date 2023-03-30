@@ -13,6 +13,11 @@
             line-height: 45.5px;
             letter-spacing: 0.1em;
             margin: 80px 0 0 0;
+            @media (max-width: calc($width_mobile + 80px)) {
+                margin: 42px 0 0 0;
+                font-size: 25px;
+                line-height: 32.5px;
+            }
         }
         .pet-cards-area {
             display: flex;
@@ -59,6 +64,11 @@
                         display: none;
                     }
                 }
+                @media (max-width: calc($width_mobile + 350px)) {
+                    &.mobile-display {
+                        display: none;
+                    }
+                }
                 
             }
             .arrow-button {
@@ -67,7 +77,7 @@
                 height: 52px;
                 width: 52px;
                 border-radius: 100px;
-                padding: 0 0 6px 0;
+                padding: 0 0 5px 0;
                 margin: 0 -38px 0 0;
                 &.right {
                     transform: rotate(180deg);
@@ -83,6 +93,19 @@
                     }
                 }
             }
+
+            @media (max-width: calc($width_mobile + 350px)) {
+                margin: 42px 0 0 0;
+                flex-direction: column;
+                .arrow-button {
+                    order: 2;
+                    margin: 20px 132px 0 0;
+                    &.right {
+                        margin: -52px 0 0 132px;
+                    }
+                }
+            }
+
         }
         .to_pets_button {
             display: inline;
@@ -103,6 +126,9 @@
                         background-color: $color-primary-light;
                     }
                 }
+            }
+            @media (max-width: calc($width_mobile + 80px)) {
+                margin: 57px 0 57px 0;
             }
         }
     }
@@ -125,9 +151,19 @@
                     column-gap: 40px;
                     margin-bottom: 40px;
                 }
+                @media (max-width: calc($width_mobile + 80px)) {
+                    justify-content: center;
+                    row-gap: 25px;
+                    margin-bottom: 42px;
+                }
                 .pet-card {
                     @media (max-width: calc($width_tablet + 80px)) {
                         &.tablet-dispay {
+                            display: none;
+                        }
+                    }
+                    @media (max-width: calc($width_mobile + 80px)) {
+                        &.mobile-display {
                             display: none;
                         }
                     }
@@ -150,7 +186,7 @@
                         letter-spacing: 0.1em;
                         font-size: 20px;
                         line-height: 23px;
-                        padding: 20px 0 0 2px;
+                        padding: 0px 0 0 2px;
                     }
                     &.inactive {
                         border: 2px solid $color-dark-s;
@@ -182,6 +218,15 @@
                 }
                 @media (max-width: calc($width_tablet + 200px)) {
                     margin-bottom: 76px;
+                }
+                @media (max-width: calc($width_mobile + 200px)) {
+                    margin: 0 -5.5px 42px -5.5px;
+                    button {
+                        margin: 0 5px 0 5px;
+                    }
+                    .list-counter {
+                        margin: 0 5px 0 5px;
+                    }
                 }
             }
         }

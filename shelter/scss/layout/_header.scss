@@ -56,6 +56,24 @@ header {
                     border-bottom: 3px $color-primary solid;
                     cursor:auto;
                 }
+                @media (max-width: calc($width_mobile + 340px)) {
+                    display: none;
+                }
+            }
+            .nav-button {
+                display: none;
+                list-style: none;
+                li {
+                    border: 1px $color-primary solid;
+                    width: 30px;
+                    margin: 0 0 8px 0;
+                }
+                @media (max-width: calc($width_mobile + 340px)) {
+                    display: initial;
+                }
+            }
+            @media (max-width: calc($width_mobile + 340px)) {
+                margin: 30px 10px 0 10px;
             }
         }
         .start {
@@ -110,8 +128,13 @@ header {
                 width: 54.5vw;
                 @media (max-width: calc($width_tablet + 250px)) {
                     align-self: flex-end;
-                    margin: 100px 0 0 0;
+                    margin: 120px 0 0 0;
                     width: 569px;
+                }
+                @media (max-width: calc($width_mobile + 250px)) {
+                    align-self: flex-end;
+                    margin: 120px 0 0 0;
+                    width: 260px;
                 }
             }
             @media (max-width: calc($width_tablet + 250px)) {
@@ -127,6 +150,33 @@ header {
                     }
                 }
             }
+            @media (max-width: calc($width_mobile + 250px)) {
+                margin: 60px 0 0 0;
+                flex-direction: column;
+                align-items: center;
+                .start-text {
+                    margin: 0 0 0 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    .friendButton {
+                        margin: 0 auto;
+                    }
+                    h1 {
+                        font-size: 25px;
+                        line-height: 32.5px;
+                        width: auto;
+                        text-align: center;
+                    }
+                    p {
+                        width: auto;
+                        font-size: 15px;
+                        line-height: 24px;
+                        text-align: center;
+                    }
+                }
+            }
+
         }
     }
     &.pets-page {
@@ -182,7 +232,18 @@ header {
                         border-bottom: 3px $color-primary solid;
                         cursor:auto;
                     }
+                    @media (max-width: calc($width_mobile + 340px)) {
+                        display: none;
+                    }
                 }
+                @media (max-width: calc($width_mobile + 340px)) {
+                    margin: 30px 10px 30px 10px;
+                    .nav-button {
+                        li {
+                            border: 1px #000000 solid;
+                        }
+                    }
+                }   
             }
         }
     }
