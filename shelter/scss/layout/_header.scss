@@ -108,7 +108,7 @@ header {
                     @include textFont("Arimo");
                     color: $color-dark-s;
                     margin: 0 0 57px 0;
-                    width: 460px;
+                    min-width: 460px;
                 }
                 .friendButton {
                     display: inline;
@@ -139,7 +139,7 @@ header {
                     margin: 114px 0 0 0;
                     width: 569px;
                 }
-                @media (max-width: calc($width_mobile + 250px)) {
+                @media (max-width: calc($width_mobile + 300px)) {
                     align-self: flex-end;
                     margin: 120px 0 0 0;
                     width: 260px;
@@ -151,10 +151,20 @@ header {
                 align-items: center;
                 .start-text {
                     margin: 0 0 0 0;
+                    padding: 0 17vw;
                     display: flex;
                     flex-direction: column;
                     .friendButton {
                         margin: 0 auto;
+                    }
+                }
+            }
+
+            @media (max-width: calc($width_tablet - 200px)) {
+                .start-text {
+                    padding: 0 5vw;
+                    p {
+                        max-width: 460px;
                     }
                 }
             }
@@ -164,6 +174,7 @@ header {
                 align-items: center;
                 .start-text {
                     margin: 0 0 0 0;
+                    padding: 0;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -182,7 +193,8 @@ header {
 
                     }
                     p {
-                        width: auto;
+                        max-width: 460px;
+                        min-width: 300px;
                         font-size: 15px;
                         line-height: 24px;
                         text-align: center;
@@ -246,11 +258,11 @@ header {
                         border-bottom: 3px $color-primary solid;
                         cursor:auto;
                     }
-                    @media (max-width: calc($width_mobile + 340px)) {
+                    @media (max-width: 767px) {
                         display: none;
                     }
                 }
-                @media (max-width: calc($width_mobile + 340px)) {
+                @media (max-width: 767px) {
                     margin: 30px 10px 30px 10px;
                     .nav-button {
                         li {

@@ -59,7 +59,7 @@
                     min-width: 170px;
                 }
             }
-            @media (max-width: $width_mobile) {
+            @media (max-width: calc($width_mobile + 320px)) {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 margin: 40px 6px 40px 5px;

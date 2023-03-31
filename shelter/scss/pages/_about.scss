@@ -8,7 +8,8 @@
         justify-content: center;
         align-items: center;
         img {
-            width: 300px;
+            max-width: 300px;
+            object-fit: cover;
             margin: 0 120px 0 0;
         }
         h2 {
@@ -32,30 +33,60 @@
         @media (max-width: $width_tablet) {
             margin-top: 80px;
             flex-direction: column;
-            h2 {
-                letter-spacing: 0.1em;
-            }
-            p {
-                margin: 24px 0 0 0;
+            .about-text {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                padding: 0 19vw;
+                h2 {
+                    letter-spacing: 0.1em;
+                }
+                p {
+                    width: auto;
+                    min-width: 430px;
+                    margin: 24px 0 0 0;
+                }
             }
             img {
                 margin: 81px 0 0 0;
                 order: 2;
             }
+            
+        }
+        @media (max-width: calc($width_tablet - 140px)) {
+            .about-text {
+                padding: 0 10vw;
+                max-width: 430px;
+            }
+            img {
+                object-fit: contain;
+                max-width: 300px;
+                min-width: 260px;
+            }
+        }
+        @media (max-width: calc($width_tablet - 240px)) {
+            .about-text {
+                padding: 0 4vw;
+            }
         }
         @media (max-width: calc($width_mobile + 100px)) {
             margin: 42px auto;
-            h2 {
-                font-size: 25px;
-                line-height: 32.5px;
-                width: auto;
-                text-align: center;
-                margin-bottom: 3px;
-            }
-            p {
-                width: auto;
-                text-align: justify;
-                margin: 24px 15px -2px 15px;
+            padding: 0;
+            .about-text {
+                padding: 0;
+                h2 {
+                    font-size: 25px;
+                    line-height: 32.5px;
+                    width: auto;
+                    text-align: center;
+                    margin-bottom: 3px;
+                }
+                p {
+                    width: auto;
+                    min-width: 270px;
+                    text-align: justify;
+                    margin: 24px 15px -2px 15px;
+                }
             }
             img {
                 margin: 43px 0 0 0;

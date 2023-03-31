@@ -134,7 +134,7 @@ header .container .start .start-text p {
   font-family: "Arimo";
   color: #CDCDCD;
   margin: 0 0 57px 0;
-  width: 460px;
+  min-width: 460px;
 }
 header .container .start .start-text .friendButton {
   display: inline;
@@ -167,7 +167,7 @@ header .container .start img {
     width: 569px;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   header .container .start img {
     align-self: flex-end;
     margin: 120px 0 0 0;
@@ -182,11 +182,20 @@ header .container .start img {
   }
   header .container .start .start-text {
     margin: 0 0 0 0;
+    padding: 0 17vw;
     display: flex;
     flex-direction: column;
   }
   header .container .start .start-text .friendButton {
     margin: 0 auto;
+  }
+}
+@media (max-width: 700px) {
+  header .container .start .start-text {
+    padding: 0 5vw;
+  }
+  header .container .start .start-text p {
+    max-width: 460px;
   }
 }
 @media (max-width: 650px) {
@@ -197,6 +206,7 @@ header .container .start img {
   }
   header .container .start .start-text {
     margin: 0 0 0 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,7 +225,8 @@ header .container .start img {
     margin: 0 0 41px 3px;
   }
   header .container .start .start-text p {
-    width: auto;
+    max-width: 460px;
+    min-width: 300px;
     font-size: 15px;
     line-height: 24px;
     text-align: center;
@@ -279,12 +290,12 @@ header.pets-page .container .nav-panel .nav-list .active-link {
   border-bottom: 3px #F1CDB3 solid;
   cursor: auto;
 }
-@media (max-width: 740px) {
+@media (max-width: 767px) {
   header.pets-page .container .nav-panel .nav-list {
     display: none;
   }
 }
-@media (max-width: 740px) {
+@media (max-width: 767px) {
   header.pets-page .container .nav-panel {
     margin: 30px 10px 30px 10px;
   }
@@ -496,7 +507,7 @@ body {
   margin: 0 30px 0 0;
 }
 .donation .danation-container .donationText {
-  width: 380px;
+  max-width: 380px;
   text-align: left;
 }
 .donation .danation-container .donationText h2 {
@@ -550,9 +561,21 @@ body {
     padding: 78px 0 100px 0;
     margin: 1px 0 0 0;
   }
+  .donation .danation-container .donationText {
+    min-width: 380px;
+    max-width: 600px;
+    text-align: left;
+    padding: 0 22vw;
+  }
   .donation .danation-container .donation_dog {
     order: 2;
     margin: 60px 0 0 0;
+  }
+}
+@media (max-width: 700px) {
+  .donation .danation-container .donationText {
+    max-width: 380px;
+    padding: 0 10vw;
   }
 }
 @media (max-width: 600px) {
@@ -568,6 +591,8 @@ body {
   }
   .donation .danation-container .donationText {
     width: auto;
+    min-width: 280px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -667,7 +692,7 @@ body {
     min-width: 170px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 720px) {
   .help .container ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -955,7 +980,8 @@ body {
   align-items: center;
 }
 .about .container img {
-  width: 300px;
+  max-width: 300px;
+  object-fit: cover;
   margin: 0 120px 0 0;
 }
 .about .container h2 {
@@ -981,10 +1007,18 @@ body {
     margin-top: 80px;
     flex-direction: column;
   }
-  .about .container h2 {
+  .about .container .about-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 19vw;
+  }
+  .about .container .about-text h2 {
     letter-spacing: 0.1em;
   }
-  .about .container p {
+  .about .container .about-text p {
+    width: auto;
+    min-width: 430px;
     margin: 24px 0 0 0;
   }
   .about .container img {
@@ -992,19 +1026,40 @@ body {
     order: 2;
   }
 }
+@media (max-width: 760px) {
+  .about .container .about-text {
+    padding: 0 10vw;
+    max-width: 430px;
+  }
+  .about .container img {
+    object-fit: contain;
+    max-width: 300px;
+    min-width: 260px;
+  }
+}
+@media (max-width: 660px) {
+  .about .container .about-text {
+    padding: 0 4vw;
+  }
+}
 @media (max-width: 500px) {
   .about .container {
     margin: 42px auto;
+    padding: 0;
   }
-  .about .container h2 {
+  .about .container .about-text {
+    padding: 0;
+  }
+  .about .container .about-text h2 {
     font-size: 25px;
     line-height: 32.5px;
     width: auto;
     text-align: center;
     margin-bottom: 3px;
   }
-  .about .container p {
+  .about .container .about-text p {
     width: auto;
+    min-width: 270px;
     text-align: justify;
     margin: 24px 15px -2px 15px;
   }
