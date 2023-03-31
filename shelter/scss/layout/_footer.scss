@@ -122,30 +122,62 @@ footer {
                 justify-content: center;
                 column-gap: 60px;
                 .footer-questions {
-                    margin: 0 0 0 0;
+                    margin: 0 0 0 10px;
                     h2 {
+                        display: block;
                         text-align: center;
                         font-size: 25px;
                         line-height: 32.5px;
-                        letter-spacing: 0.07em;
+                        letter-spacing: 0.1em;
                         margin: 0 0 0 0;
                     }
                     div {
                         justify-content: center;
+                        margin: 39px 0 0 0;
                     }
                 }
                 .footer-visit {
-                    margin: 40px 0 0 0;
+                    margin: 41px 0 0 0;
                     h2 {
                         font-size: 25px;
                         line-height: 32.5px;
+                        letter-spacing: 0.099em;
                         text-align: center;
+                        margin: 0 0 0 7px;
+                    }
+                    div {
+                        margin: 39px 0 0 0;
+                        a {
+                            letter-spacing: 0.09em;
+                        }
                     }
                 }
             }
             img {
                 margin: 40px 0 0 0;
                 max-width: 260px;
+            }
+            &.pets-page {
+                margin: 31px 0 0 0;
+                .footer-text {
+                    .footer-questions {
+                        margin: 0 0 0 20px;
+                    }
+                    .footer-visit {
+                        h2 {
+                            margin: 0 0 0 20px;
+                        }
+                        div {
+                            margin: 39px 0 0 0;
+                            a {
+                                letter-spacing: 0.06em;
+                            }
+                        }
+                    }
+                }
+                img {
+                    margin: 40px 0 0 0;   
+                }
             }
         }
     }

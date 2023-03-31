@@ -63,17 +63,19 @@ header {
             .nav-button {
                 display: none;
                 list-style: none;
+                margin: 20px 0 0 0;
                 li {
                     border: 1px $color-primary solid;
-                    width: 30px;
+                    width: 29px;
                     margin: 0 0 8px 0;
+                    padding: 0;
                 }
                 @media (max-width: calc($width_mobile + 340px)) {
                     display: initial;
                 }
             }
             @media (max-width: calc($width_mobile + 340px)) {
-                margin: 30px 10px 0 10px;
+                margin: 29px 10px 0 10px;
             }
 
             @media (max-width: calc($width_tablet + 250px)) {
@@ -164,21 +166,27 @@ header {
                     margin: 0 0 0 0;
                     display: flex;
                     flex-direction: column;
-
+                    align-items: center;
                     .friendButton {
                         margin: 0 auto;
                     }
                     h1 {
+                        display: inline;
+                        max-width: 200px;
                         font-size: 25px;
                         line-height: 32.5px;
+                        letter-spacing: 0.10em;
                         width: auto;
                         text-align: center;
+                        margin: 0 0 41px 3px;
+
                     }
                     p {
                         width: auto;
                         font-size: 15px;
                         line-height: 24px;
                         text-align: center;
+                        margin: 0 0 58px 0;
                     }
                 }
             }

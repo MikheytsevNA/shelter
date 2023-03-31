@@ -85,11 +85,13 @@ header .container .nav-panel .nav-list .active-link {
 header .container .nav-panel .nav-button {
   display: none;
   list-style: none;
+  margin: 20px 0 0 0;
 }
 header .container .nav-panel .nav-button li {
   border: 1px #F1CDB3 solid;
-  width: 30px;
+  width: 29px;
   margin: 0 0 8px 0;
+  padding: 0;
 }
 @media (max-width: 740px) {
   header .container .nav-panel .nav-button {
@@ -98,7 +100,7 @@ header .container .nav-panel .nav-button li {
 }
 @media (max-width: 740px) {
   header .container .nav-panel {
-    margin: 30px 10px 0 10px;
+    margin: 29px 10px 0 10px;
   }
 }
 @media (max-width: 1150px) {
@@ -197,21 +199,27 @@ header .container .start img {
     margin: 0 0 0 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   header .container .start .start-text .friendButton {
     margin: 0 auto;
   }
   header .container .start .start-text h1 {
+    display: inline;
+    max-width: 200px;
     font-size: 25px;
     line-height: 32.5px;
+    letter-spacing: 0.1em;
     width: auto;
     text-align: center;
+    margin: 0 0 41px 3px;
   }
   header .container .start .start-text p {
     width: auto;
     font-size: 15px;
     line-height: 24px;
     text-align: center;
+    margin: 0 0 58px 0;
   }
 }
 header.pets-page {
@@ -413,29 +421,57 @@ footer .footer-container.pets-page img {
     column-gap: 60px;
   }
   footer .footer-container .footer-text .footer-questions {
-    margin: 0 0 0 0;
+    margin: 0 0 0 10px;
   }
   footer .footer-container .footer-text .footer-questions h2 {
+    display: block;
     text-align: center;
     font-size: 25px;
     line-height: 32.5px;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.1em;
     margin: 0 0 0 0;
   }
   footer .footer-container .footer-text .footer-questions div {
     justify-content: center;
+    margin: 39px 0 0 0;
   }
   footer .footer-container .footer-text .footer-visit {
-    margin: 40px 0 0 0;
+    margin: 41px 0 0 0;
   }
   footer .footer-container .footer-text .footer-visit h2 {
     font-size: 25px;
     line-height: 32.5px;
+    letter-spacing: 0.099em;
     text-align: center;
+    margin: 0 0 0 7px;
+  }
+  footer .footer-container .footer-text .footer-visit div {
+    margin: 39px 0 0 0;
+  }
+  footer .footer-container .footer-text .footer-visit div a {
+    letter-spacing: 0.09em;
   }
   footer .footer-container img {
     margin: 40px 0 0 0;
     max-width: 260px;
+  }
+  footer .footer-container.pets-page {
+    margin: 31px 0 0 0;
+  }
+  footer .footer-container.pets-page .footer-text .footer-questions {
+    margin: 0 0 0 20px;
+  }
+  footer .footer-container.pets-page .footer-text .footer-visit h2 {
+    margin: 0 0 0 20px;
+  }
+  footer .footer-container.pets-page .footer-text .footer-visit div {
+    margin: 39px 0 0 0;
+  }
+  footer .footer-container.pets-page .footer-text .footer-visit div a {
+    letter-spacing: 0.06em;
+  }
+  footer .footer-container.pets-page img {
+    margin: 40px 0 0 0;
   }
 }
 
@@ -543,7 +579,8 @@ body {
   }
   .donation .danation-container .donationText p {
     line-height: 24px;
-    letter-spacing: initial;
+    letter-spacing: 0.047em;
+    margin: 0 0 19px 0;
   }
   .donation .danation-container .donationText .credit-card {
     align-items: center;
@@ -632,8 +669,11 @@ body {
 }
 @media (max-width: 400px) {
   .help .container ul {
-    margin: 42px 0 42px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px 6px 40px 5px;
     column-gap: 30px;
+    row-gap: 30px;
   }
   .help .container ul li {
     min-width: 130px;
@@ -641,6 +681,14 @@ body {
   .help .container ul li span {
     font-size: 15px;
     line-height: 16.5px;
+  }
+  .help .container ul li img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 21px;
+  }
+  .help .container ul li.last-on-mobile {
+    justify-self: flex-start;
   }
 }
 
@@ -725,6 +773,9 @@ body {
   .pets .container .pet-cards-area .pet-card.mobile-display {
     display: none;
   }
+  .pets .container .pet-cards-area .pet-card p {
+    margin: 0 0 31px 0;
+  }
 }
 .pets .container .pet-cards-area .arrow-button {
   border: 2px solid #F1CDB3;
@@ -748,11 +799,6 @@ body {
   }
   .pets .container .pet-cards-area .arrow-button.right {
     margin: 1px 0 0 -27px;
-  }
-}
-@media (max-width: 900px) {
-  .pets .container .pet-cards-area.pets-page {
-    margin: 29px 0 0 0;
   }
 }
 @media (max-width: 750px) {
@@ -813,14 +859,14 @@ body {
   .pets.pets-page .container .pet-cards-area {
     justify-content: center;
     column-gap: 40px;
-    margin-bottom: 40px;
+    margin: 29px 0 0 0;
   }
 }
 @media (max-width: 480px) {
   .pets.pets-page .container .pet-cards-area {
     justify-content: center;
-    row-gap: 25px;
-    margin-bottom: 42px;
+    row-gap: 31px;
+    margin: 41px 0 0 0;
   }
 }
 @media (max-width: 980px) {
@@ -888,7 +934,7 @@ body {
 }
 @media (max-width: 600px) {
   .pets.pets-page .container .list-buttons {
-    margin: 0 -5.5px 42px -5.5px;
+    margin: 42px -5.5px 43px -5.5px;
   }
   .pets.pets-page .container .list-buttons button {
     margin: 0 5px 0 5px;
@@ -960,10 +1006,10 @@ body {
   .about .container p {
     width: auto;
     text-align: justify;
-    margin: 22px 15px 0 15px;
+    margin: 24px 15px -2px 15px;
   }
   .about .container img {
-    margin: 42px 0 0 0;
+    margin: 43px 0 0 0;
     width: 260px;
   }
 }

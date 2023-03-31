@@ -74,6 +74,9 @@
                     &.mobile-display {
                         display: none;
                     }
+                    p {
+                        margin: 0 0 31px 0;
+                    }
                 }
                 
             }
@@ -97,12 +100,6 @@
                     &.right {
                         margin: 1px 0 0 -27px;
                     }
-                }
-            }
-            
-            @media (max-width: $width_tablet) {
-                &.pets-page {
-                    margin: 29px 0 0 0;
                 }
             }
 
@@ -161,12 +158,12 @@
                 @media (max-width: calc($width_tablet + 80px)) {
                     justify-content: center;
                     column-gap: 40px;
-                    margin-bottom: 40px;
+                    margin: 29px 0 0 0;
                 }
                 @media (max-width: calc($width_mobile + 80px)) {
                     justify-content: center;
-                    row-gap: 25px;
-                    margin-bottom: 42px;
+                    row-gap: 31px;
+                    margin: 41px 0 0 0;
                 }
                 .pet-card {
                     @media (max-width: calc($width_tablet + 80px)) {
@@ -232,7 +229,7 @@
                     margin-bottom: 76px;
                 }
                 @media (max-width: calc($width_mobile + 200px)) {
-                    margin: 0 -5.5px 42px -5.5px;
+                    margin: 42px -5.5px 43px -5.5px;
                     button {
                         margin: 0 5px 0 5px;
                     }
