@@ -63,6 +63,12 @@
                     &.tablet-dispay {
                         display: none;
                     }
+                    p {
+                        margin: 0 0 32px 0;
+                    }
+                    .learn-more-button {
+                        padding: 12px 44px;
+                    }
                 }
                 @media (max-width: calc($width_mobile + 350px)) {
                     &.mobile-display {
@@ -87,10 +93,16 @@
                     background-color: $color-primary-light;
                 }
                 @media (max-width: $width_tablet) {
-                    margin: 0 -27px 0 0;
+                    margin: 1px -27px 0 0;
                     &.right {
-                        margin: 0 0 0 -27px;
+                        margin: 1px 0 0 -27px;
                     }
+                }
+            }
+            
+            @media (max-width: $width_tablet) {
+                &.pets-page {
+                    margin: 29px 0 0 0;
                 }
             }
 

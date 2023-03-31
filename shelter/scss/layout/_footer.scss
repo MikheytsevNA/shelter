@@ -80,19 +80,37 @@ footer {
             .footer-text {
                 justify-content: center;
                 column-gap: 60px;
+                margin: 0 10px 0 0;
                 .footer-questions {
+                    max-width: 278px;
                     margin: 0 0 0 0;
                     h2 {
-                        letter-spacing: 0.07em;
+                        display: inline;
+                        letter-spacing: 0.105em;
                         margin: 0 0 0 0;
+                    }
+                    div {
+                        margin: 40px 0 0 0;
                     }
                 }
                 .footer-visit {
+                    max-width: 302px;
                     margin: 0 0 0 0;
+                    div {
+                        margin: 33px 0 0 0;
+                    }
                 }
             }
             img {
                 margin: 65px 0 0 0;
+            }
+        }
+        &.pets-page {
+            .footer-text{
+                margin: 0 20px 0 0;
+            }
+            img {
+                margin: 65px 10px 0 0;
             }
         }
         @media (max-width: calc($width_mobile + 300px)) {

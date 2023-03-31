@@ -101,6 +101,11 @@ header .container .nav-panel .nav-button li {
     margin: 30px 10px 0 10px;
   }
 }
+@media (max-width: 1150px) {
+  header .container .nav-panel .logo {
+    margin-right: 20px;
+  }
+}
 header .container .start {
   margin-top: 90px;
   display: flex;
@@ -156,7 +161,7 @@ header .container .start img {
 @media (max-width: 1150px) {
   header .container .start img {
     align-self: flex-end;
-    margin: 120px 0 0 0;
+    margin: 114px 0 0 0;
     width: 569px;
   }
 }
@@ -365,20 +370,36 @@ footer .footer-container .footer-text .footer-visit div a {
   footer .footer-container .footer-text {
     justify-content: center;
     column-gap: 60px;
+    margin: 0 10px 0 0;
   }
   footer .footer-container .footer-text .footer-questions {
+    max-width: 278px;
     margin: 0 0 0 0;
   }
   footer .footer-container .footer-text .footer-questions h2 {
-    letter-spacing: 0.07em;
+    display: inline;
+    letter-spacing: 0.105em;
     margin: 0 0 0 0;
   }
+  footer .footer-container .footer-text .footer-questions div {
+    margin: 40px 0 0 0;
+  }
   footer .footer-container .footer-text .footer-visit {
+    max-width: 302px;
     margin: 0 0 0 0;
+  }
+  footer .footer-container .footer-text .footer-visit div {
+    margin: 33px 0 0 0;
   }
   footer .footer-container img {
     margin: 65px 0 0 0;
   }
+}
+footer .footer-container.pets-page .footer-text {
+  margin: 0 20px 0 0;
+}
+footer .footer-container.pets-page img {
+  margin: 65px 10px 0 0;
 }
 @media (max-width: 700px) {
   footer .footer-container {
@@ -490,6 +511,8 @@ body {
 @media (max-width: 985px) {
   .donation .danation-container {
     flex-direction: column;
+    padding: 78px 0 100px 0;
+    margin: 1px 0 0 0;
   }
   .donation .danation-container .donation_dog {
     order: 2;
@@ -553,9 +576,14 @@ body {
   font-family: "Tinos";
   font-size: 35px;
   font-weight: 400;
-  line-height: 47.5px;
+  line-height: 45.5px;
   letter-spacing: 0.094em;
   margin: 79px 0 0 3px;
+}
+@media (max-width: 900px) {
+  .help .container h2 {
+    margin: 78px 0 0 3px;
+  }
 }
 @media (max-width: 400px) {
   .help .container h2 {
@@ -582,7 +610,7 @@ body {
 .help .container ul li img {
   width: 60px;
   height: 60px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   align-self: center;
 }
 .help .container ul li span {
@@ -590,11 +618,12 @@ body {
   font-family: "Tinos";
   font-size: 20px;
   font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 0.094em;
+  line-height: 23px;
+  letter-spacing: 0.1em;
 }
 @media (max-width: 900px) {
   .help .container ul {
+    margin: 60px 0 100px 0;
     column-gap: 60px;
   }
   .help .container ul li {
@@ -685,6 +714,12 @@ body {
   .pets .container .pet-cards-area .pet-card.tablet-dispay {
     display: none;
   }
+  .pets .container .pet-cards-area .pet-card p {
+    margin: 0 0 32px 0;
+  }
+  .pets .container .pet-cards-area .pet-card .learn-more-button {
+    padding: 12px 44px;
+  }
 }
 @media (max-width: 750px) {
   .pets .container .pet-cards-area .pet-card.mobile-display {
@@ -709,10 +744,15 @@ body {
 }
 @media (max-width: 900px) {
   .pets .container .pet-cards-area .arrow-button {
-    margin: 0 -27px 0 0;
+    margin: 1px -27px 0 0;
   }
   .pets .container .pet-cards-area .arrow-button.right {
-    margin: 0 0 0 -27px;
+    margin: 1px 0 0 -27px;
+  }
+}
+@media (max-width: 900px) {
+  .pets .container .pet-cards-area.pets-page {
+    margin: 29px 0 0 0;
   }
 }
 @media (max-width: 750px) {
@@ -892,10 +932,17 @@ body {
 }
 @media (max-width: 900px) {
   .about .container {
+    margin-top: 80px;
     flex-direction: column;
   }
+  .about .container h2 {
+    letter-spacing: 0.1em;
+  }
+  .about .container p {
+    margin: 24px 0 0 0;
+  }
   .about .container img {
-    margin: 80px 0 0 0;
+    margin: 81px 0 0 0;
     order: 2;
   }
 }

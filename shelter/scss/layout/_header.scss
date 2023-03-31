@@ -75,6 +75,12 @@ header {
             @media (max-width: calc($width_mobile + 340px)) {
                 margin: 30px 10px 0 10px;
             }
+
+            @media (max-width: calc($width_tablet + 250px)) {
+                .logo {
+                    margin-right: 20px;
+                }
+            }
         }
         .start {
             margin-top: 90px;
@@ -128,7 +134,7 @@ header {
                 width: 54.5vw;
                 @media (max-width: calc($width_tablet + 250px)) {
                     align-self: flex-end;
-                    margin: 120px 0 0 0;
+                    margin: 114px 0 0 0;
                     width: 569px;
                 }
                 @media (max-width: calc($width_mobile + 250px)) {
