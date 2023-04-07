@@ -39,6 +39,7 @@ header {
                 letter-spacing: initial;
                 padding: 0;
                 margin: 16px 2px 0 0;
+                transition: 1s;
                 .nav-link {
                     text-decoration: none;
                     color: $color-dark-s;
@@ -56,22 +57,51 @@ header {
                     border-bottom: 3px $color-primary solid;
                     cursor:auto;
                 }
-                @media (max-width: calc($width_mobile + 340px)) {
-                    display: none;
+                @media (max-width: 767px) {
+                    position: fixed;
+                    right: -100%;
+                    bottom: 0%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    order: 3;
+                    width: 320px;
+                    height: 100vh;
+                    background-color: $color-dark-3xl;
+                    li {
+                        margin: 0 0 0 0;
+                        padding: 20px;
+                        .nav-link {
+                            margin: 0 0 0 0;
+                            padding: 0 0 0 0;
+                        }
+                    }
+                    &.active-menu {
+                        right: 0;
+                    }
                 }
             }
             .nav-button {
                 display: none;
                 list-style: none;
                 margin: 20px 0 0 0;
+                transition: 1s;
                 li {
                     border: 1px $color-primary solid;
                     width: 29px;
                     margin: 0 0 8px 0;
                     padding: 0;
                 }
-                @media (max-width: calc($width_mobile + 340px)) {
+                &.active-button {
+                    transform: rotate(90deg) translateY(15px);
+                    margin: 0 0 0 0;
+                    padding: 0 0 0 0;
+                }
+                @media (max-width: 767px) {
+                    z-index: 2;
                     display: initial;
+                    cursor: pointer;
                 }
             }
             @media (max-width: calc($width_mobile + 340px)) {
@@ -259,7 +289,28 @@ header {
                         cursor:auto;
                     }
                     @media (max-width: 767px) {
-                        display: none;
+                        position: fixed;
+                        right: -100%;
+                        bottom: 0%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        order: 3;
+                        width: 320px;
+                        height: 100vh;
+                        background-color: $color-light-xl;
+                        li {
+                            margin: 0 0 40px 0;
+                            padding: 0 0 0 0;
+                            .nav-link {
+                                margin: 20px 40px 0 40px;
+                                padding: 0;
+                            }
+                        }
+                        &.active-menu {
+                            right: 0;
+                        }
                     }
                 }
                 @media (max-width: 767px) {

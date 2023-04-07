@@ -59,6 +59,18 @@
                 &:hover {
                     background-color: $color-light-xl;
                 }
+                &.hidden-right {
+                    position: absolute;
+                    right: 100%;
+                    display: none;
+                    transition: 1s;
+                }
+                &.hidden-left {
+                    position: absolute;
+                    left: -100%;
+                    display: none;
+                    transition: 1s;
+                }
                 @media (max-width: calc($width_tablet + 200px)) {
                     &.tablet-dispay {
                         display: none;

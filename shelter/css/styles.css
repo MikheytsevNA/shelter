@@ -59,6 +59,7 @@ header .container .nav-panel .nav-list {
   letter-spacing: initial;
   padding: 0;
   margin: 16px 2px 0 0;
+  transition: 1s;
 }
 header .container .nav-panel .nav-list .nav-link {
   text-decoration: none;
@@ -77,15 +78,37 @@ header .container .nav-panel .nav-list .active-link {
   border-bottom: 3px #F1CDB3 solid;
   cursor: auto;
 }
-@media (max-width: 740px) {
+@media (max-width: 767px) {
   header .container .nav-panel .nav-list {
-    display: none;
+    position: fixed;
+    right: -100%;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+    width: 320px;
+    height: 100vh;
+    background-color: #292929;
+  }
+  header .container .nav-panel .nav-list li {
+    margin: 0 0 0 0;
+    padding: 20px;
+  }
+  header .container .nav-panel .nav-list li .nav-link {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+  header .container .nav-panel .nav-list.active-menu {
+    right: 0;
   }
 }
 header .container .nav-panel .nav-button {
   display: none;
   list-style: none;
   margin: 20px 0 0 0;
+  transition: 1s;
 }
 header .container .nav-panel .nav-button li {
   border: 1px #F1CDB3 solid;
@@ -93,9 +116,16 @@ header .container .nav-panel .nav-button li {
   margin: 0 0 8px 0;
   padding: 0;
 }
-@media (max-width: 740px) {
+header .container .nav-panel .nav-button.active-button {
+  transform: rotate(90deg) translateY(15px);
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+@media (max-width: 767px) {
   header .container .nav-panel .nav-button {
+    z-index: 2;
     display: initial;
+    cursor: pointer;
   }
 }
 @media (max-width: 740px) {
@@ -292,7 +322,28 @@ header.pets-page .container .nav-panel .nav-list .active-link {
 }
 @media (max-width: 767px) {
   header.pets-page .container .nav-panel .nav-list {
-    display: none;
+    position: fixed;
+    right: -100%;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+    width: 320px;
+    height: 100vh;
+    background-color: #FFFFFF;
+  }
+  header.pets-page .container .nav-panel .nav-list li {
+    margin: 0 0 40px 0;
+    padding: 0 0 0 0;
+  }
+  header.pets-page .container .nav-panel .nav-list li .nav-link {
+    margin: 20px 40px 0 40px;
+    padding: 0;
+  }
+  header.pets-page .container .nav-panel .nav-list.active-menu {
+    right: 0;
   }
 }
 @media (max-width: 767px) {
@@ -489,6 +540,9 @@ footer .footer-container.pets-page img {
 body {
   display: flex;
   flex-direction: column;
+}
+body.scroll-lock {
+  overflow: hidden;
 }
 
 .donation {
@@ -783,6 +837,18 @@ body {
 .pets .container .pet-cards-area .pet-card:hover {
   background-color: #FFFFFF;
 }
+.pets .container .pet-cards-area .pet-card.hidden-right {
+  position: absolute;
+  right: 100%;
+  display: none;
+  transition: 1s;
+}
+.pets .container .pet-cards-area .pet-card.hidden-left {
+  position: absolute;
+  left: -100%;
+  display: none;
+  transition: 1s;
+}
 @media (max-width: 1100px) {
   .pets .container .pet-cards-area .pet-card.tablet-dispay {
     display: none;
@@ -1011,7 +1077,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 0 19vw;
+    padding: 0 18vw;
   }
   .about .container .about-text h2 {
     letter-spacing: 0.1em;
