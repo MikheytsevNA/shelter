@@ -8,7 +8,7 @@ export default function sliderHandler () {
         const promise = await fetch(request);
         const petsList = await promise.json();
 
-        makeCards (petsList);
+        makeCards (petsList); 
     }
 
     function makeCards (obj) {
