@@ -434,7 +434,7 @@ footer .footer-container .footer-text .footer-visit div a {
   line-height: 23px;
   letter-spacing: 0.1em;
 }
-@media (max-width: 1202px) {
+@media (max-width: 1220px) {
   footer .footer-container {
     flex-direction: column;
     align-items: center;
@@ -1198,7 +1198,7 @@ body.scroll-lock {
   height: auto;
   border-radius: 9px;
 }
-.pop-up .container img :hover {
+.pop-up .container img:hover {
   box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .pop-up .container .pop-up-text {

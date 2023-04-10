@@ -13,8 +13,13 @@ export default function popUpHandler() {
         petsArea.addEventListener("click", learnMoreButton);
 
         function closePopUp(event) {
-            document.querySelector('.pop-up').remove();
-            document.body.classList.remove('scroll-lock');
+            if (event.target.closest('.container')) {
+                return;
+            } else {
+                document.querySelector('.pop-up').remove();
+                document.body.classList.remove('scroll-lock');
+                document.removeEventListener("click", closePopUp);
+            }
         }
 
         function learnMoreButton (event) {
@@ -52,8 +57,7 @@ export default function popUpHandler() {
             document.querySelector("main").append(div);
             document.body.classList.add('scroll-lock');
             
-            const closePopUpButton = document.querySelector(".close-button");
-            closePopUpButton.addEventListener("click", closePopUp, {once:true});
+            document.addEventListener("click", closePopUp);
         }
     });
 }

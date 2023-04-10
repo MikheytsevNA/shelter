@@ -15,26 +15,45 @@ export default function pagingHandler () {
         var pagesArray = new pages(data);
 
         if (window.innerWidth > 300 && window.innerWidth < 750) {
-            pagesArray.setPages(16, 2);
+            pagesArray.setPages(16, 2, Math.max(1,Math.floor(pagesArray.currentPage*2)));
             makeInitial (data, pagesArray);
-        } else if (window.innerWidth > 750 && window.innerWidth < 1182) {
-            pagesArray.setPages(8, 5);
+        } else if (window.innerWidth >= 750 && window.innerWidth < 1182) {
+            pagesArray.setPages(8, 5, Math.max(1,Math.floor(pagesArray.currentPage/2)));
             makeInitial (data, pagesArray);
         } else {
-            pagesArray.setPages(6, 7);
+            pagesArray.setPages(6, 7, Math.max(1,Math.floor(pagesArray.currentPage*6/8)));
             makeInitial (data, pagesArray);
         }
         
         window.addEventListener("resize", (event) => { // making appropriate number of cards on resize
             if (window.innerWidth > 300 && window.innerWidth < 750) {
-                pagesArray.setPages(16, 2);
-                makeInitial (data, pagesArray);
-            } else if (window.innerWidth > 750 && window.innerWidth < 1182) {
-                pagesArray.setPages(8, 5);
-                makeInitial (data, pagesArray);
+                if (pagesArray.pageCount == 6) {
+                    pagesArray.setPages(16, 2, Math.max(1,Math.floor(pagesArray.currentPage/6*16)));
+                    makeInitial (data, pagesArray);
+                } else if (pagesArray.pageCount == 8) {
+                    if (pagesArray.currentPage != 1) {
+                        pagesArray.setPages(16, 2, Math.max(1,Math.floor(pagesArray.currentPage*2)));
+                    } else {
+                        pagesArray.setPages(16, 2, 1);
+                    }
+                    makeInitial (data, pagesArray);
+                }
+            } else if (window.innerWidth >= 750 && window.innerWidth < 1182) {
+                if (pagesArray.pageCount == 16) {
+                    pagesArray.setPages(8, 5, Math.max(1,Math.floor(pagesArray.currentPage/2)));
+                    makeInitial (data, pagesArray);
+                } else if (pagesArray.pageCount == 6) {
+                    pagesArray.setPages(8, 5, Math.max(1,Math.floor(pagesArray.currentPage*8/6)));
+                    makeInitial (data, pagesArray);
+                }
             } else {
-                pagesArray.setPages(6, 7);
-                makeInitial (data, pagesArray);
+                if (pagesArray.pageCount == 8) {
+                    pagesArray.setPages(6, 7, Math.max(1,Math.floor(pagesArray.currentPage*6/8)));
+                    makeInitial (data, pagesArray);
+                } else if (pagesArray.pageCount == 16) {
+                    pagesArray.setPages(6, 7, Math.max(1,Math.floor(pagesArray.currentPage*6/16)));
+                    makeInitial (data, pagesArray);
+                }
             }
         });
         const toRightButton = document.querySelector('.to-next-button');
@@ -133,6 +152,7 @@ export default function pagingHandler () {
                             </button>`
             document.querySelector(".pet-cards-area.pets-page").append(div);
         }
+        document.querySelector('.list-counter').textContent = pageArray.currentPage;
     }
 
     class pages {
@@ -171,9 +191,10 @@ export default function pagingHandler () {
                 this.currentPage = 1;
             }
         }
-        setPages (pages, perPage) {
+        setPages (pages, perPage, curPage) {
             this.pageCount = pages;
             this.max = perPage;
+            this.currentPage = curPage;
             this.currentArray = this.cardsArray.slice(this.min, this.max+1);
         }
     }

@@ -130,7 +130,7 @@ export default function sliderHandlerTest () {
             this.saved.sort();
             this.current.sort();
             this.other.sort();
-            console.log(this.toString());
+            //console.log(this.toString());
         };
 
         moveRight() {
@@ -156,7 +156,7 @@ export default function sliderHandlerTest () {
             this.saved.sort();
             this.current.sort();
             this.other.sort();
-            console.log(this.toString());
+            //console.log(this.toString());
         };
         toString() {
             console.log(this.current);
