@@ -7,7 +7,7 @@ export default function popUpHandler() {
         return petsList;
     }
 
-    getDataFromJson("./../assets/items.json")
+    getDataFromJson("./../js/items.json")
     .then(data => {
         const petsArea = document.querySelector(".pet-cards-area.pets-page");
         petsArea.addEventListener("click", learnMoreButton);

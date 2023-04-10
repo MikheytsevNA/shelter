@@ -8,7 +8,7 @@ export default function pagingHandler () {
     }
 
     
-    getDataFromJson("./../assets/items.json")
+    getDataFromJson("./../js/items.json")
     .then(data => {
         var width_tablet = 768;
         var width_mobile = 320;

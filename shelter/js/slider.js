@@ -146,6 +146,6 @@ export default function sliderHandler () {
     const leftButton = document.querySelector('.arrow-button.left');
     leftButton.addEventListener('click', leftSlideHandle);
 
-    getDataFromJson("./../assets/items.json");
+    getDataFromJson("./js/items.json");
     //setTimeout(() => {leftSlideHandle();}, 50);
 }

@@ -9,7 +9,7 @@ export default function sliderHandlerTest () {
     }
 
     
-    getDataFromJson("./../assets/items.json")
+    getDataFromJson("./js/items.json")
     .then(data => {
         var petCards = new petCard();
         petCards.current = Array.from(Array(data.length).keys()).slice(0,3);
