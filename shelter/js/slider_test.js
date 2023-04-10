@@ -1,5 +1,4 @@
 export default function sliderHandlerTest () {
-    let isNew = false;
 
     async function getDataFromJson(pathToJson) {
         const request = new Request(pathToJson);

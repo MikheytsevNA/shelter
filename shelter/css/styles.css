@@ -1031,6 +1031,7 @@ body.scroll-lock {
 @media (max-width: 1100px) {
   .pets.pets-page .container .list-buttons {
     margin-bottom: 76px;
+    margin-top: 40px;
   }
 }
 @media (max-width: 600px) {
